@@ -1,0 +1,66 @@
+<div class="left">
+    <div class="left_filters">
+        <p>Filters</p>
+        <ul>
+            <li (click)="handlelivetrackingclick()">
+                <div class="first-section">
+                    <mat-icon>
+                        gps_fixed
+                    </mat-icon>
+                    <span>Live Tracking</span>
+                    <mat-icon *ngIf="sidefiltervalues.livetracking"
+                        style="color: green;">check_circle_outline</mat-icon>
+                </div>
+            </li>
+            <li (click)="handlerescheduleclick()">
+                <div class="first-section">
+                    <mat-icon>restore</mat-icon>
+                    <span>Reschedulable</span>
+                    <mat-icon *ngIf="sidefiltervalues.reschedulable"
+                        style="color: green;">check_circle_outline</mat-icon>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="left_filters">
+        <p>DEPARTURE TIME</p>
+        <ul>
+            <li *ngFor="let key of getobjectkey(sidefiltervalues.departuretime)" class="first-section">
+            <input type="checkbox" [name]="key" [checked]="sidefiltervalues.departuretime[key]" (change)="handledeparturetimeclick($event,key)">
+            <mat-icon>av_timer</mat-icon>
+            <span>{{key}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="left_filters">
+        <p>BUS TYPES</p>
+        <ul>
+            <li *ngFor="let key of getobjectkey(sidefiltervalues.bustype)" class="first-section">
+            <input type="checkbox" [name]="key" [checked]="sidefiltervalues.bustype[key]" (change)="handlebustypeclick($event,key)">
+            <mat-icon>airline_seat_legroom_extra</mat-icon>
+            <span>{{key}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="left_filters">
+        <p>ARRIVAL TIME</p>
+        <ul>
+            <li *ngFor="let key of getobjectkey(sidefiltervalues.arrivaltime)" class="first-section">
+            <input type="checkbox" [name]="key" [checked]="sidefiltervalues.arrivaltime[key]" (change)="handlearivaltimeclick($event,key)">
+            <mat-icon>av_timer</mat-icon>
+            <span>{{key}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="left_filters">
+        <p>AMENITIES</p>
+        <ul>
+            <li *ngFor="let key of getobjectkey(sidefiltervalues.amenities)" class="first-section">
+            <mat-icon>{{amenityIcon[key]}}</mat-icon>
+            <span>{{key}}</span>
+            </li>
+        </ul>
+    </div>
+
+</div>

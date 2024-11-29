@@ -1,0 +1,27 @@
+.left{
+    padding: 15px;
+}
+.left ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.left_filters{
+    margin-bottom: 25px;
+}
+.left ul li{
+    border-bottom: 2px solid white;
+    padding :15px 0px;
+    cursor: pointer;
+}
+
+.left li i{
+    margin-right: 10px;
+}
+
+.first-section{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+    align-items: center;
+}

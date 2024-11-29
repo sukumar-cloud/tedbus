@@ -1,0 +1,85 @@
+<div class="bus-box">
+    <div class="busBoxSection1">
+        <div class="busBoxSection11">
+            <div>{{operatorname}}</div>
+            <div>{{bustypename}}</div>
+        </div>
+        <div class="busBoxSection12">
+            <div>
+                {{busdeparturetime}}:00
+            </div>
+            <div>{{routedetails.departureLocation.name}}</div>
+        </div>
+        <div class="busBoxSection13">
+            <div>
+                {{routedetails.duration}} &nbsp;h
+            </div>
+        </div>
+        <div class="busBoxSection14">
+            <div>
+                {{busarrivaltime}}:00
+            </div>
+            <div>
+                {{routedetails.arrivalLocation.name}}
+            </div>
+        </div>
+        <div class="busBoxSection15">
+            <div>
+                <i class="material-icons">star</i>
+                <div>{{avgrating}}</div>
+            </div>
+            <div><i class="material-icons">people</i>
+                <div>{{totalreview}}</div>
+            </div>
+        </div>
+        <div class="busBoxSection16">
+            <div>
+                <div>INR</div>
+                <div>{{seatprivce}}</div>
+            </div>
+            <div><i class="material-icons">local_offer</i>
+                <div>reDeal applied</div>
+            </div>
+        </div>
+        <div class="busBoxSection17">
+            <div></div>
+            <div>
+                <div>{{40 -filledseats.length}}</div>
+                <div>Seats Available</div>
+            </div>
+            <div>20</div>
+            <div>Window</div>
+        </div>
+    </div>
+    <div class="busBoxSection2">
+        <div class="busBoxSection21">
+            <span matTooltip="Charging Point">
+                <i class="material-icons">power</i>
+            </span>
+            <span matTooltip="Movie">
+                <i class="material-icons">movie_filter</i>
+            </span>
+            <span matTooltip="Reading Light">
+                <i class="material-icons">wb_incandescent</i>
+            </span>
+            <span matTooltip="Track My Bus">
+                <i class="material-icons">directions_bus</i>
+            </span>
+        </div>
+        <div class="busBoxSection22">
+            <div *ngIf="livetracking ===1">
+                <i class="material-icons">gps_fixed</i>
+                <span>Live Tracking</span>
+            </div>
+            <div *ngIf="reschedulable === 1">
+                <i class="material-icons">restore</i>
+                <span>Reschedulable</span>
+            </div>
+        </div>
+    </div>
+    <div class="busBoxSection3">
+        <app-bottom-tab [busid]='busid' [filledseats]="filledseats" [seatprice]="seatprivce" [routedetials]="routedetails"
+            [busarrivaltime]="busarrivaltime" [busdeparturetime]="busdeparturetime"
+            [operatorname]="operatorname"></app-bottom-tab>
+    </div>
+</div>

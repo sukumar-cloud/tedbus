@@ -1,0 +1,12 @@
+<div>
+    <app-sorting-bar></app-sorting-bar>
+    <div *ngFor="let bus of matchedbus; index as i">
+        <div *ngFor="let key of getkeys()">
+            <div *ngIf="bus._id === key">
+                <app-bus-box [rating]='bus.rating' [busid]="bus._id" [operatorname]="bus.operatorName" [bustype]="bus.busType"
+                    [departuretime]="bus.departureTime" [livetracking]="bus.liveTracking" [reschedulable]="bus.reschedulable" [filledseats]="seats[key]"
+                    [routedetails]="routes"></app-bus-box>
+            </div>
+        </div>
+    </div>
+</div>
