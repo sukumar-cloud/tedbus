@@ -1,1 +1,1 @@
-export const url:string='http://localhost:5000/';
+export const url:string='https://tedbus-k8vq.onrender.com';
