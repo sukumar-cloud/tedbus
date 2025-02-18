@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-declare var google:any;
-import { CustomerService } from '../../service/customer.service';
-import { Customer } from '../../model/customer.model';
 import { Router } from '@angular/router';
+import { CustomerService } from '../../service/customer.service';
+declare var google:any;
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -20,7 +19,7 @@ ngOnInit(): void {
 
 
   google.accounts.id.initialize({
-    client_id:"129421237209-jricn8ed4fgld4glk6k716deq5ebsmpb.apps.googleusercontent.com",
+    client_id:"927389231250-guo104mabm73spnj3ef7atl55v8ueuk7.apps.googleusercontent.com",
     callback:(response:any)=>{this.handlelogin(response);
 
     }
