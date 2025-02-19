@@ -1,5 +1,5 @@
 export interface Booking {
-    id?: string; // Optional if you are using MongoDB's default _id field
+    _id?: string; // Optional if you are using MongoDB's default _id field
     customerId: string; // Assuming customerId is stored as ObjectId reference
     passengerDetails: Passenger[];
     email: string;

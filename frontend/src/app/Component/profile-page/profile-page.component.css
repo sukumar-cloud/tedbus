@@ -1,121 +1,210 @@
+/* profile-page.component.css (Profile Section - Rating & Review) */
 body {
-   
-    font-weight: 400;
-  }
-  .ProfilePannel {
-    display: flex;
-    justify-content: flex-start;
-    margin: 0px;
-  }
-  .profileName {
-    font-size: 16px;
-    font-weight: 900;
-    color: #000;
-  }
-  .walletVerified {
-    background-color: #12f1cc;
-    width: auto;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 12px;
-    font-weight: 400;
-    color: #000;
-  }
-  .leftPannel_eachListOption {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 3% 0%;
-    
-  }
-  .leftPannel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .line {
-    height: 1em;
-    width: 100%;
-    border-bottom: 0.5px solid rgb(222, 222, 222);
-  }
-  .seprator {
-    height: 100vh;
-    width: 1em;
-    border-right: 0.5px solid rgb(222, 222, 222);
-  }
-  .leftPart {
-    width: 15%;
-  }
-  .leftPannel_eachListItem {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5% 10%;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  .leftPannel_eachListItem_text {
-    
-    font-weight: 600;
-    font-size: 14px;
-    color: #656161;
-  }
-  .rightPannel {
-    width: 70%;
-  
-    height: 100%;
-    padding: 20px 10px;
-  }
-  .profileHeading {
-    margin: 30px 0 17px 120px;
-    display: inline-block;
-    color: #737373;
-    font-size: 19px;
-    font-weight: 500;
-  }
-  .profilebox {
-    margin: 7px 0 15px 120px;
-    background-color: #fff;
-    width: 78%;
-    border-radius: 0.5em;
-    box-shadow: 0 0 10px #bdbcbc;
-    padding: 4% 8%;
-  }
-  .userDetailHeading {
-    font-size: 12px;
-    color: #737373;
-    font-weight: 400;
-    padding-bottom: 2px;
-    text-transform: uppercase;
-  }
-  .userDetailInfo {
-    font-size: 16px;
-    color: #676565;
-    font-weight: 900;
-  }
-  .contactDetailsHeading {
-    padding: 0px 0px;
-    color: #737373;
-    font-size: 19px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .contactLine {
-    height: 1em;
-    width: 300px;
-    border-bottom: 0.5px solid rgb(222, 222, 222);
-  }
-  
-  /* CSS */
-  .leftPannel > li {
-    cursor: pointer;
-    width: 100%;
-    margin: 0;
-    margin-bottom: -14px;
-  }
-  .leftPannel > li:hover {
-    background-color: #ddd;
-  }
+  font-weight: 400;
+}
+
+.ProfilePannel {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.profileName {
+  font-size: 16px;
+  font-weight: 900;
+  color: #000;
+}
+
+.walletVerified {
+  background-color: #12f1cc;
+  width: auto;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  border-radius: 3px;
+}
+
+.leftPannel_eachListOption {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3% 0;
+}
+
+.leftPannel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  height: 1em;
+  width: 100%;
+  border-bottom: 0.5px solid rgb(222, 222, 222);
+}
+
+.seprator {
+  height: 100vh;
+  width: 1em;
+  border-right: 0.5px solid rgb(222, 222, 222);
+}
+
+.leftPart {
+  width: 15%;
+}
+
+.leftPannel_eachListItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5% 10%;
+}
+
+ul {
+  list-style: none;
+}
+
+.leftPannel_eachListItem_text {
+  font-weight: 600;
+  font-size: 14px;
+  color: #656161;
+}
+
+.rightPannel {
+  width: 70%;
+  height: 100%;
+  padding: 20px 10px;
+}
+
+.profileHeading {
+  margin: 30px 0 17px 120px;
+  display: inline-block;
+  color: #737373;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.profilebox {
+  margin: 7px 0 15px 120px;
+  background-color: #fff;
+  width: 78%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #bdbcbc;
+  padding: 4% 8%;
+}
+
+.userDetailHeading {
+  font-size: 12px;
+  color: #737373;
+  font-weight: 400;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.userDetailInfo {
+  font-size: 16px;
+  color: #676565;
+  font-weight: 900;
+}
+
+.contactDetailsHeading {
+  padding: 0;
+  color: #737373;
+  font-size: 19px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contactLine {
+  height: 1em;
+  width: 300px;
+  border-bottom: 0.5px solid rgb(222, 222, 222);
+}
+
+.leftPannel > li {
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  margin-bottom: -14px;
+}
+
+.leftPannel > li:hover {
+  background-color: #ddd;
+}
+
+/* Rating & Review Section */
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 10px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.reviews {
+  margin-top: 20px;
+}
+
+.review-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.review-item strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}

@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class MyTripComponent  {
   @Input() booking:any
- 
 
   imageArr = [
     {
