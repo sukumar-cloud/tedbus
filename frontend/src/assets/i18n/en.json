@@ -1,4 +1,70 @@
 {
-    "WELCOME": "Welcome to our bus booking system",
-    "BOOK_NOW": "Book Now"
-}
+    "TOP_RTCS": "Top RTCs",
+    "WELCOME": "Welcome",
+    "GSRTC": "GSRTC",
+    "MSRTC": "MSRTC",
+    "TNSTC": "TNSTC",
+    "VIEW_ALL": "View All",
+    
+    "OTHERS": "Others",
+    "TSRTC": "TSRTC",
+    "SBSTC": "SBSTC",
+    "RSRTC": "RSRTC",
+    "KERALA_RTC": "Kerala RTC",
+  
+    "TOP_BUS_ROUTES": "Top Bus Routes",
+    "HYD_BLR": "Hyderabad to Bangalore Bus",
+    "BLR_CHN": "Bangalore to Chennai Bus",
+    "PUNE_BLR": "Pune to Bangalore Bus",
+    "MUM_BLR": "Mumbai to Bangalore Bus",
+  
+    "TOP_CITIES": "Top Cities",
+    "HYD_TICKETS": "Hyderabad Bus Tickets",
+    "BLR_TICKETS": "Bangalore Bus Tickets",
+    "CHN_TICKETS": "Chennai Bus Tickets",
+    "PUNE_TICKETS": "Pune Bus Tickets",
+  
+    "REDRAIL": "redRail",
+    "BOOK_TRAIN": "Book Train Tickets",
+    "PNR_STATUS": "PNR Status",
+    "LIVE_TRAIN_STATUS": "Live Train Status",
+    "SEAT_AVAILABILITY": "Train Seat Availability",
+    "TRAIN_BETWEEN_STATIONS": "Trains between Stations",
+  
+    "ABOUT_TEDBUS": "About tedbus",
+    "ABOUT_US": "About Us",
+    "INVESTOR_RELATIONS": "Investor Relations",
+    "CONTACT_US": "Contact Us",
+    "MOBILE_VERSION": "Mobile Version",
+    "TEDBUS_MOBILE": "tedbus on Mobile",
+    "SITEMAP": "Sitemap",
+    "OFFERS": "Offers",
+    "CAREERS": "Careers",
+    "VALUES": "Values",
+  
+    "INFO": "Info",
+    "TNC": "T&C",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "FAQ": "FAQ",
+    "BLOG": "Blog",
+    "BUS_OPERATOR_REG": "Bus Operator Registration",
+    "AGENT_REG": "Agent Registration",
+    "INSURANCE_PARTNER": "Insurance Partner",
+    "USER_AGREEMENT": "User Agreement",
+  
+    "GLOBAL_SITES": "Global Sites",
+    "INDIA": "India",
+    "SINGAPORE": "Singapore",
+    "MALAYSIA": "Malaysia",
+    "INDONESIA": "Indonesia",
+    "PERU": "Peru",
+    "COLOMBIA": "Colombia",
+  
+    "OUR_PARTNERS": "Our Partners",
+    "GOIBIBO_BUS": "Goibibo Bus",
+    "GOIBIBO_HOTELS": "Goibibo Hotels",
+    "MAKEMYTRIP_BUS": "Makemytrip Bus",
+    "MAKEMYTRIP_HOTELS": "Makemytrip Hotels",
+  
+    "FOOTER_DESC": "tedbus is the world's largest online bus ticket booking service trusted by over 25 million happy customers globally. tedbus offers bus ticket booking through its website, iOS and Android mobile apps for all major routes."
+  }

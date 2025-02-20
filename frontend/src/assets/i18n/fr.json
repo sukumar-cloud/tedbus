@@ -1,4 +1,70 @@
 {
-    "WELCOME": "Bienvenue sur notre système de réservation de bus",
-    "BOOK_NOW": "Réserver maintenant"
+  "TOP_RTCS": "Principaux RTC",
+  "WELCOME": "Bienvenue",
+  "GSRTC": "GSRTC",
+  "MSRTC": "MSRTC",
+  "TNSTC": "TNSTC",
+  "VIEW_ALL": "Voir tout",
+  
+  "OTHERS": "Autres",
+  "TSRTC": "TSRTC",
+  "SBSTC": "SBSTC",
+  "RSRTC": "RSRTC",
+  "KERALA_RTC": "Kerala RTC",
+
+  "TOP_BUS_ROUTES": "Principales routes de bus",
+  "HYD_BLR": "Bus Hyderabad à Bangalore",
+  "BLR_CHN": "Bus Bangalore à Chennai",
+  "PUNE_BLR": "Bus Pune à Bangalore",
+  "MUM_BLR": "Bus Mumbai à Bangalore",
+
+  "TOP_CITIES": "Villes principales",
+  "HYD_TICKETS": "Billets de bus Hyderabad",
+  "BLR_TICKETS": "Billets de bus Bangalore",
+  "CHN_TICKETS": "Billets de bus Chennai",
+  "PUNE_TICKETS": "Billets de bus Pune",
+
+  "REDRAIL": "redRail",
+  "BOOK_TRAIN": "Réserver des billets de train",
+  "PNR_STATUS": "Statut PNR",
+  "LIVE_TRAIN_STATUS": "Statut en direct du train",
+  "SEAT_AVAILABILITY": "Disponibilité des sièges de train",
+  "TRAIN_BETWEEN_STATIONS": "Trains entre les gares",
+
+  "ABOUT_TEDBUS": "À propos de tedbus",
+  "ABOUT_US": "À propos de nous",
+  "INVESTOR_RELATIONS": "Relations avec les investisseurs",
+  "CONTACT_US": "Nous contacter",
+  "MOBILE_VERSION": "Version mobile",
+  "TEDBUS_MOBILE": "tedbus sur mobile",
+  "SITEMAP": "Plan du site",
+  "OFFERS": "Offres",
+  "CAREERS": "Carrières",
+  "VALUES": "Valeurs",
+
+  "INFO": "Infos",
+  "TNC": "T&C",
+  "PRIVACY_POLICY": "Politique de confidentialité",
+  "FAQ": "FAQ",
+  "BLOG": "Blog",
+  "BUS_OPERATOR_REG": "Enregistrement de l'opérateur de bus",
+  "AGENT_REG": "Enregistrement de l'agent",
+  "INSURANCE_PARTNER": "Partenaire d'assurance",
+  "USER_AGREEMENT": "Accord utilisateur",
+
+  "GLOBAL_SITES": "Sites mondiaux",
+  "INDIA": "Inde",
+  "SINGAPORE": "Singapour",
+  "MALAYSIA": "Malaisie",
+  "INDONESIA": "Indonésie",
+  "PERU": "Pérou",
+  "COLOMBIA": "Colombie",
+
+  "OUR_PARTNERS": "Nos partenaires",
+  "GOIBIBO_BUS": "Goibibo Bus",
+  "GOIBIBO_HOTELS": "Goibibo Hôtels",
+  "MAKEMYTRIP_BUS": "Makemytrip Bus",
+  "MAKEMYTRIP_HOTELS": "Makemytrip Hôtels",
+
+  "FOOTER_DESC": "tedbus est le plus grand service de réservation de billets de bus en ligne au monde, faisant confiance à plus de 25 millions de clients heureux à travers le monde. tedbus propose la réservation de billets de bus via son site Web, ses applications mobiles iOS et Android pour toutes les routes principales."
 }
