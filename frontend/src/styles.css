@@ -8,5 +8,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: white;
     width: 0;
 }
+/* Reduce the size of the Google Translate dropdown */
+#google_translate_element select {
+    font-size: 12px; /* Adjust font size */
+    padding: 2px 5px; /* Reduce padding */
+    height: 25px; /* Decrease height */
+    width: auto; /* Adjust width dynamically */
+}
+
+/* Reduce the size of the Google Translate toolbar */
+.goog-te-gadget {
+    font-size: 12px !important; /* Decrease text size */
+}
+
+/* If Google Translate banner appears, hide it */
+.goog-te-banner-frame {
+    display: none !important;
+}
 
 
