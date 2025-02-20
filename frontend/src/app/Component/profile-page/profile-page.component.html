@@ -74,24 +74,22 @@
     </div>
 
     <h3>Rate & Review Your Trip</h3>
-    <form [formGroup]="reviewForm" (ngSubmit)="submitReview()" class="review-form">
-      <div class="form-group">
-        <label for="rating">Rating (1-5):</label>
-        <input type="number" id="rating" formControlName="rating" min="1" max="5" required>
-      </div>
+  <form [formGroup]="reviewForm" (ngSubmit)="submitReview()">
+  <label for="rating">Rating (1-5):</label>
+  <input type="number" id="rating" formControlName="rating" min="1" max="5" required>
 
-      <div class="form-group">
-        <label for="comment">Comment:</label>
-        <textarea id="comment" formControlName="comment" required></textarea>
-      </div>
+  <label for="comment">Comment:</label>
+  <textarea id="comment" formControlName="comment" required></textarea>
 
-      <button type="submit" [disabled]="reviewForm.invalid">Submit Review</button>
-    </form>
+  <button type="submit" [disabled]="reviewForm.invalid">Submit Review</button>
+</form>
 
+    
     <h3>Reviews</h3>
-    <div *ngFor="let review of reviews" class="review-item">
+    <div *ngFor="let review of reviews">
       <p><strong>Rating:</strong> {{ review.rating }}</p>
       <p><strong>Comment:</strong> {{ review.comment }}</p>
+
     </div>
   </div>
 </div>

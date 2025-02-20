@@ -23,6 +23,8 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "@ngx-translate/core": "^16.0.4",
+    "@ngx-translate/http-loader": "^16.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
@@ -34,6 +36,7 @@
     "@cypress/schematic": "^2.5.2",
     "@types/jasmine": "~5.1.0",
     "autoprefixer": "^10.4.20",
+    "cypress": "latest",
     "dotenv-webpack": "^8.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -43,7 +46,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
-    "typescript": "~5.4.2",
-    "cypress": "latest"
+    "typescript": "~5.4.2"
   }
 }
