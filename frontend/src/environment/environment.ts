@@ -1,12 +1,13 @@
 export const environment = {
     production: false,
     firebase: {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_PROJECT_ID.appspot.com",
-        messagingSenderId: "YOUR_SENDER_ID",
-        appId: "YOUR_APP_ID",
-        vapidKey: "YOUR_VAPID_KEY" // For Web Push Notifications
+        apiKey: "AIzaSyAdRGAC0pEvIhASdnzFa4j_vIDL-2gueZo",
+        authDomain: "tedbus-ee0fe.firebaseapp.com",
+        projectId: "tedbus-ee0fe",
+        storageBucket: "tedbus-ee0fe.firebasestorage.app",
+        messagingSenderId: "732780127025",
+        appId: "1:732780127025:web:280c1c470c903d58a1c610",
+        measurementId: "G-CRQZWGKG26",
+        vapidKey: "BE_JTNxPOVx0NFOk6Q7kdg8Dio784LnuvNTgpfhZlnaPiGZjifr1zXVq4texjRAYL4QZJsCf7iCIJuwzt6HUXHc" // For Web Push Notifications
     }
 };
