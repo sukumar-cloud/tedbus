@@ -2,7 +2,7 @@ const express=require('express')
 const bodyparser=require('body-parser')
 const cors =require('cors')
 const mongoose=require('mongoose')
-const admin = require("./firebase");
+const admin = require("./firebase.js");
 
 const app=express();
 
