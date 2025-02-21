@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { provideNativeDateAdapter } from '@angular/material/core';
@@ -37,55 +39,53 @@ import { ViewSeatsComponent } from './Component/selectbus-page/right/view-seats/
 import { SelectbusPageComponent } from './Component/selectbus-page/selectbus-page.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    LandingPageComponent,
-    DialogComponent,
-    SelectbusPageComponent,
-    HeaderComponent,
-    LeftComponent,
-    RightComponent,
-    SortingBarComponent,
-    BusBoxComponent,
-    BottomTabComponent,
-    ViewSeatsComponent,
-    FormDrawerComponent,
-    SmallSeatsComponent,
-    BusBookingFormComponent,
-    PaymentPageComponent,
-    ProfilePageComponent,
-    MyTripComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatMenuModule,
-    MatButtonModule,
-    BrowserAnimationsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatTableModule,
-    FormsModule,
-    MatIconModule,
-    CommonModule,
-    MatSidenavModule,
-    MatDividerModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-      TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
-      })
-  ],
-  providers: [provideNativeDateAdapter()],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        FooterComponent,
+        LandingPageComponent,
+        DialogComponent,
+        SelectbusPageComponent,
+        HeaderComponent,
+        LeftComponent,
+        RightComponent,
+        SortingBarComponent,
+        BusBoxComponent,
+        BottomTabComponent,
+        ViewSeatsComponent,
+        FormDrawerComponent,
+        SmallSeatsComponent,
+        BusBookingFormComponent,
+        PaymentPageComponent,
+        ProfilePageComponent,
+        MyTripComponent
+    ],
+    bootstrap: [AppComponent],
+    imports: [BrowserModule,
+        AppRoutingModule,
+        MatMenuModule,
+        MatButtonModule,
+        BrowserAnimationsModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        MatTableModule,
+        FormsModule,
+        MatIconModule,
+        CommonModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireMessagingModule,
+        MatSidenavModule,
+        MatDividerModule,
+        ReactiveFormsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })], providers: [provideNativeDateAdapter(), provideHttpClient(withInterceptorsFromDi())]
 })
 export class AppModule { }
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
