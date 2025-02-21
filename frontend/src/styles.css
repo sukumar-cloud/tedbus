@@ -13,7 +13,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 12px; /* Adjust font size */
     padding: 2px 5px; /* Reduce padding */
     height: 25px; /* Decrease height */
-    width: auto; /* Adjust width dynamically */
+    width: 25px; /* Adjust width dynamically */
 }
 
 /* Reduce the size of the Google Translate toolbar */
@@ -25,5 +25,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .goog-te-banner-frame {
     display: none !important;
 }
+
 
 
