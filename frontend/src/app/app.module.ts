@@ -17,6 +17,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './Component/footer/footer.component';
@@ -37,6 +38,7 @@ import { SmallSeatsComponent } from './Component/selectbus-page/right/small-seat
 import { SortingBarComponent } from './Component/selectbus-page/right/sorting-bar/sorting-bar.component';
 import { ViewSeatsComponent } from './Component/selectbus-page/right/view-seats/view-seats.component';
 import { SelectbusPageComponent } from './Component/selectbus-page/selectbus-page.component';
+
 
 @NgModule({
     declarations: [
