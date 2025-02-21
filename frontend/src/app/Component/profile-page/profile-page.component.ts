@@ -76,7 +76,7 @@ export class ProfilePageComponent implements OnInit {
       message: "Your bus ticket has been booked successfully!"
     };
 
-    this.http.post("http://localhost:5000/send-sms", payload)
+    this.http.post("/send-sms", payload)
       .subscribe(response => console.log("SMS sent", response),
         error => console.error("Error sending SMS", error));
   }
