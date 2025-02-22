@@ -19,12 +19,14 @@ const customerroutes = require("./routes/customer");
 const routesroute = require("./routes/route");
 const bookingroute = require("./routes/booking");
 const travelStoriesRoutes = require("./routes/travelStories");
+const travelStoriesRoutes = require('./routes/travelStories');
 
 // Use routes
 app.use(bookingroute);
 app.use(routesroute);
 app.use(customerroutes);
 app.use(apiUrl, travelStoriesRoutes);
+app.use('/api', travelStoriesRoutes);
 
 // MongoDB connection
 const DBURL = "mongodb+srv://admin:admin@tedbus.vqk1yid.mongodb.net/?retryWrites=true&w=majority&appName=tedbus";
