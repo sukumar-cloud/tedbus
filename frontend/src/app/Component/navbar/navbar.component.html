@@ -67,12 +67,11 @@
 
     <!-- navbar right part starts here  -->
     <div id="google-btn" *ngIf="!isloggedIn"></div>
-    <d class="hidden md:flex items-center gap-3" *ngIf="isloggedIn">
+    <div class="hidden md:flex items-center gap-3" *ngIf="isloggedIn">
 
         <a class="flex items-center justify-center gap-2 h-10 px-2 rounded-lg hover:bg-gray-100">
             <i class="fa-solid fa-headset text-[#4a4a4a] text-xl"></i>
             <p (click)="openChatbot()" class="help-btn">Help</p>
-
         </a>
 
         <button #elseBlock class="flex items-center justify-center gap-2 h-10 px-2 rounded-lg hover:bg-gray-100"
