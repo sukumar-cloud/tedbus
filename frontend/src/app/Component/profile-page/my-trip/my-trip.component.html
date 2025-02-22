@@ -1,3 +1,29 @@
+<div class="travel-stories">
+  <h2>Travel Stories</h2>
+
+  <!-- Submit Travel Story Form -->
+  <div class="story-form">
+    <h3>Share Your Travel Experience</h3>
+    
+    <input type="text" [(ngModel)]="newStory.title" placeholder="Enter story title" />
+    
+    <textarea [(ngModel)]="newStory.content" placeholder="Write your story..."></textarea>
+    
+    <button (click)="submitStory()">Submit Story</button>
+  </div>
+
+  <!-- Display Travel Stories -->
+  <div *ngIf="travelStories.length === 0">
+    <p>No travel stories yet.</p>
+  </div>
+
+  <div *ngFor="let story of travelStories" class="story-card">
+    <h3>{{ story.title }}</h3>
+    <p>{{ story.content }}</p>
+  </div>
+</div>
+
+
 <div class="SingleTrip" *ngFor="let booking of booking">
     <div class="SingleTrip__image">
       <img [src]="randomimage" alt="bus" />
@@ -54,29 +80,4 @@
       </div>
     </div>
   </div>
-  <div class="travel-stories">
-    <h2>Travel Stories</h2>
-  
-    <!-- Submit Travel Story Form -->
-    <div class="story-form">
-      <h3>Share Your Travel Experience</h3>
-      
-      <input type="text" [(ngModel)]="newStory.title" placeholder="Enter story title" />
-      
-      <textarea [(ngModel)]="newStory.content" placeholder="Write your story..."></textarea>
-      
-      <button (click)="submitStory()">Submit Story</button>
-    </div>
-  
-    <!-- Display Travel Stories -->
-    <div *ngIf="travelStories.length === 0">
-      <p>No travel stories yet.</p>
-    </div>
-  
-    <div *ngFor="let story of travelStories" class="story-card">
-      <h3>{{ story.title }}</h3>
-      <p>{{ story.content }}</p>
-    </div>
-  </div>
-  
   

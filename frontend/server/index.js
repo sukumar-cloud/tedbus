@@ -78,3 +78,5 @@ app.post("/send-sms", async (req, res) => {
         res.status(500).json({ error: "Failed to send SMS" });
     }
 });
+const travelStoriesRoutes = require('./routes/travelStories');
+app.use('/api', travelStoriesRoutes);
