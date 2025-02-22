@@ -54,4 +54,16 @@
       </div>
     </div>
   </div>
+  <div class="travel-stories">
+    <h2>Travel Stories</h2>
+  
+    <div *ngIf="travelStories.length === 0">
+      <p>No travel stories yet.</p>
+    </div>
+  
+    <div *ngFor="let story of travelStories" class="story-card">
+      <h3>{{ story.title }}</h3>
+      <p>{{ story.content }}</p>
+    </div>
+  </div>
   
