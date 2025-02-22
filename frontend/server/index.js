@@ -53,6 +53,8 @@ app.post("/send-notification", async (req, res) => {
         res.status(500).send("Failed to send notification");
     }
 });
+const travelStoriesRoutes = require("./routes/travelStories");
+app.use("/api", travelStoriesRoutes);
 
 // Send SMS Notification
 app.post("/send-sms", async (req, res) => {
