@@ -15,7 +15,7 @@ app.use(bodyparser.json());
 const customerroutes = require("./routes/customer");
 const routesroute = require("./routes/route");
 const bookingroute = require("./routes/booking");
-const travelStoriesRoutes = require("./routes/travelStories"); // <-- Added travel stories route
+const travelStoriesRoutes = require("./routes/travelStories"); 
 
 // Use routes
 app.use(bookingroute);
@@ -32,6 +32,8 @@ mongoose.connect(DBURL)
 app.get('/', (req, res) => {
     res.send('Hello, Ted bus is working');
 });
+const travelStoriesRoute = require("./routes/travelStories");
+app.use(travelStoriesRoute);
 
 // Server setup
 const PORT = 5000;
