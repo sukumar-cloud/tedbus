@@ -11,17 +11,20 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyparser.json());
 
+// Environment variable for API URL
+const apiUrl = process.env.API_URL || "/api"; 
+
 // Import routes
 const customerroutes = require("./routes/customer");
 const routesroute = require("./routes/route");
 const bookingroute = require("./routes/booking");
-const travelStoriesRoutes = require("./routes/travelStories"); 
+const travelStoriesRoutes = require("./routes/travelStories");
 
 // Use routes
 app.use(bookingroute);
 app.use(routesroute);
 app.use(customerroutes);
-app.use("/api", travelStoriesRoutes); // <-- Register the travel stories route correctly
+app.use(apiUrl, travelStoriesRoutes);
 
 // MongoDB connection
 const DBURL = "mongodb+srv://admin:admin@tedbus.vqk1yid.mongodb.net/?retryWrites=true&w=majority&appName=tedbus";
@@ -32,14 +35,13 @@ mongoose.connect(DBURL)
 app.get('/', (req, res) => {
     res.send('Hello, Ted bus is working');
 });
-const travelStoriesRoute = require("./routes/travelStories");
-app.use(travelStoriesRoute);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+// Notification API
 app.post("/send-notification", async (req, res) => {
     const { title, body, token } = req.body;
 
@@ -60,6 +62,7 @@ app.post("/send-notification", async (req, res) => {
     }
 });
 
+// SMS API
 app.post("/send-sms", async (req, res) => {
     const { phone, message } = req.body;
 

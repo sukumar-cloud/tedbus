@@ -5,8 +5,9 @@ const path = require("path");
 const router = express.Router();
 const filePath = path.join(__dirname, "../data/travelStories.json");
 
-router.get('/api/travel-stories', (req, res) => {
-    fs.readFile(storiesFile, (err, data) => {
+// Get Travel Stories
+router.get('/travel-stories', (req, res) => {
+    fs.readFile(filePath, (err, data) => {
         if (err) {
             return res.status(500).json({ error: 'Error reading stories' });
         }
@@ -15,8 +16,8 @@ router.get('/api/travel-stories', (req, res) => {
 });
 
 // Save Travel Story
-router.post('/api/travel-stories', (req, res) => {
-    fs.readFile(storiesFile, (err, data) => {
+router.post('/travel-stories', (req, res) => {
+    fs.readFile(filePath, (err, data) => {
         if (err) {
             return res.status(500).json({ error: 'Error reading stories' });
         }
@@ -29,7 +30,7 @@ router.post('/api/travel-stories', (req, res) => {
 
         stories.push(newStory);
 
-        fs.writeFile(storiesFile, JSON.stringify(stories, null, 2), (err) => {
+        fs.writeFile(filePath, JSON.stringify(stories, null, 2), (err) => {
             if (err) {
                 return res.status(500).json({ error: 'Error saving story' });
             }
@@ -37,4 +38,5 @@ router.post('/api/travel-stories', (req, res) => {
         });
     });
 });
+
 module.exports = router;
