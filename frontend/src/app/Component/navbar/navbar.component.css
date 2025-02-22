@@ -1,0 +1,27 @@
+.help-btn {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .close-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

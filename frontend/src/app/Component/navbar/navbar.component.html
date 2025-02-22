@@ -4,12 +4,11 @@
     <div class="flex gap-2 md:gap-16 items-center w-full justify-between md:w-auto md:justify-start">
         <div class="grid place-content-center">
             <img class="md:w-[4.5rem] md:h-auto w-12 h-10"
-                src="../../../assets/red-bus-with-word-bus-it_600323-482.avif" alt="Tedbus Logo"
-                >
+                src="../../../assets/red-bus-with-word-bus-it_600323-482.avif" alt="Tedbus Logo">
         </div>
         <div class="h-6 w-[1px] bg-gray-200"></div>
         <div class="flex gap-3">
-            <a 
+            <a
                 class="flex flex-col items-center text-center gap-1 px-2 py-3 rounded-lg group hover:bg-gray-100 bg-main-color sm:bg-transparent">
                 <svg class="group-hover:fill-main-color fill-white sm:fill-black" width="29" height="20"
                     viewBox="0 0 29 20">
@@ -65,17 +64,24 @@
 
 
 
-   
+
     <!-- navbar right part starts here  -->
     <div id="google-btn" *ngIf="!isloggedIn"></div>
-    <div class="hidden md:flex items-center gap-3"  *ngIf="isloggedIn">
-        
+    <div class="hidden md:flex items-center gap-3" *ngIf="isloggedIn">
+
         <a class="flex items-center justify-center gap-2 h-10 px-2 rounded-lg hover:bg-gray-100">
             <i class="fa-solid fa-headset text-[#4a4a4a] text-xl"></i>
-            <p>Help</p>
+            <p (click)="toggleChat()" class="help-btn">Help</p>
+            <div class="chat-container" *ngIf="showChat">
+                <iframe src="https://www.chatbase.co/chatbot-iframe/P_oaTbYqNQggLW3vNQAx-" width="100%"
+                    style="height: 100%; min-height: 700px" frameborder="0"></iframe>
+                <button class="close-btn" (click)="toggleChat()">X</button>
+            </div>
+
         </a>
-        
-        <button #elseBlock class="flex items-center justify-center gap-2 h-10 px-2 rounded-lg hover:bg-gray-100"  [matMenuTriggerFor]="menu">
+
+        <button #elseBlock class="flex items-center justify-center gap-2 h-10 px-2 rounded-lg hover:bg-gray-100"
+            [matMenuTriggerFor]="menu">
             <i class="fa-regular fa-user text-[#4a4a4a] text-xl"></i>
             <p>Account</p>
             <i class="fa-solid fa-angle-down  text-[#4a4a4a] text-xl"></i>
@@ -89,5 +95,4 @@
             <button mat-menu-item (click)="navigate('/profile')">rate and review </button>
         </mat-menu>
     </div>
-
 </nav>

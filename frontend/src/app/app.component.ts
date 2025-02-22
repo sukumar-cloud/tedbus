@@ -32,14 +32,14 @@ export class AppComponent implements OnInit {
     this.afMessaging.requestToken
       .pipe(take(1))
       .subscribe(
-        token => {
-          if (token) {  // ✅ Check if token is not null
-            console.log('FCM Token:', token);
-            localStorage.setItem('fcm_token', token);
-          } else {
-            console.warn('FCM Token is null');
-          }
-        },
+        (token) => {
+        if (token) {
+          console.log('FCM Token:', token);
+          localStorage.setItem('fcm_token', token);
+        } else {
+          console.warn('FCM Token is null');
+        }
+      },
         error => console.error('Error getting notification permission', error)
       );
   }
