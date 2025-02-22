@@ -1,19 +1,18 @@
 [
     {
-      "title": "A Beautiful Journey to the Mountains",
-      "content": "I had an amazing time traveling through the mountains. The view was breathtaking!",
-      "image": "https://example.com/mountain.jpg",
-      "author": "65f2c9f5a0e5b5d1f2a9b9c7",
-      "likes": [],
-      "comments": []
+        "title": "A Beautiful Journey to the Mountains",
+        "content": "I had an amazing time traveling through the mountains. The view was breathtaking!",
+        "image": "https://example.com/mountain.jpg",
+        "author": "65f2c9f5a0e5b5d1f2a9b9c7",
+        "likes": [],
+        "comments": []
     },
     {
-      "title": "Exploring the Coastal Roads",
-      "content": "Driving along the coast was a dream come true. The sunsets were magical!",
-      "image": "https://example.com/coast.jpg",
-      "author": "65f2c9f5a0e5b5d1f2a9b9c8",
-      "likes": [],
-      "comments": []
+        "title": "Exploring the Coastal Roads",
+        "content": "Driving along the coast was a dream come true. The sunsets were magical!",
+        "image": "https://example.com/coast.jpg",
+        "author": "65f2c9f5a0e5b5d1f2a9b9c8",
+        "likes": [],
+        "comments": []
     }
-  ]
-  
+]
