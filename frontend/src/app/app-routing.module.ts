@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChatbotComponent } from './Component/chatbot/chatbot.Component';
+import { ChatbotComponent } from './Component/chatbot/chatbot.component';
 import { LandingPageComponent } from './Component/landing-page/landing-page.component';
 import { PaymentPageComponent } from './Component/payment-page/payment-page.component';
 import { ProfilePageComponent } from './Component/profile-page/profile-page.component';
