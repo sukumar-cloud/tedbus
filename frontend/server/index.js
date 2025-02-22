@@ -11,26 +11,32 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyparser.json());
 
+// Import routes
 const customerroutes = require("./routes/customer");
 const routesroute = require("./routes/route");
 const bookingroute = require("./routes/booking");
+const travelStoriesRoutes = require("./routes/travelStories"); // <-- Added travel stories route
 
+// Use routes
 app.use(bookingroute);
 app.use(routesroute);
 app.use(customerroutes);
+app.use("/api", travelStoriesRoutes); // <-- Register the travel stories route correctly
 
+// MongoDB connection
 const DBURL = "mongodb+srv://admin:admin@tedbus.vqk1yid.mongodb.net/?retryWrites=true&w=majority&appName=tedbus";
 mongoose.connect(DBURL)
     .then(() => console.log("Mongodb connected"))
     .catch(err => console.error('Mongodb connection error:', err));
 
 app.get('/', (req, res) => {
-    res.send('Hello , Ted bus is working');
+    res.send('Hello, Ted bus is working');
 });
 
+// Server setup
 const PORT = 5000;
 app.listen(PORT, () => {
-    console.log(`server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
 
 // Send Push Notification
@@ -53,8 +59,6 @@ app.post("/send-notification", async (req, res) => {
         res.status(500).send("Failed to send notification");
     }
 });
-const travelStoriesRoutes = require("./routes/travelStories");
-app.use("/api", travelStoriesRoutes);
 
 // Send SMS Notification
 app.post("/send-sms", async (req, res) => {
