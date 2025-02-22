@@ -10,8 +10,6 @@ declare var google: any;
 })
 export class NavbarComponent implements OnInit {
   isloggedIn: boolean = false;
-  showChat: boolean = false; // Added for chatbot toggle
-
   constructor(private router: Router, private customerservice: CustomerService) {}
 
   ngOnInit(): void {
@@ -70,8 +68,7 @@ export class NavbarComponent implements OnInit {
     this.router.navigate([route]);
   }
 
-  // 🔹 Chatbot Toggle Function
-  toggleChat() {
-    this.showChat = !this.showChat;
+  openChatbot() {
+    this.router.navigate(['/chatbot']);
   }
 }
