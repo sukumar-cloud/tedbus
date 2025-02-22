@@ -1,5 +1,7 @@
 export const environment = {
     production: true,
+    apiUrl: 'https://tedbus-k8vq.onrender.com/api',
+
     firebase: {
         apiKey: 'AIzaSyAdRGAC0pEvIhASdnzFa4j_vIDL-2gueZo',
         authDomain: 'tedbus-ee0fe.firebaseapp.com',

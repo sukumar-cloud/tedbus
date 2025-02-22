@@ -1,14 +1,17 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Bus } from "../model/bus.model"
+import { environment } from '../../environments/environment';
 import { url } from '../config';
 import { Booking } from '../model/booking.model';
+import { Bus } from "../model/bus.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BusService {
+  private apiUrl = `${environment.apiUrl}/travel-stories`; // Use environment variable
+
   private busbookapi: string = url + 'booking/'
   private apiurl: string = url + 'routes/'
   constructor(private http: HttpClient) { }

@@ -1,12 +1,16 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Customer } from '../model/customer.model';
+import { environment } from '../../environments/environment';
 import { url } from '../config';
+import { Customer } from '../model/customer.model';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
+  private apiUrl = `${environment.apiUrl}/travel-stories`; // Use environment variable
+
   private apiurl:string=url + 'customer/'
   constructor(private http:HttpClient) { }
 

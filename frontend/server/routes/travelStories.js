@@ -5,43 +5,36 @@ const path = require("path");
 const router = express.Router();
 const filePath = path.join(__dirname, "../data/travelStories.json");
 
-// GET all travel stories
-router.get("/api/posts", (req, res) => {
-    fs.readFile(filePath, "utf8", (err, data) => {
+router.get('/api/travel-stories', (req, res) => {
+    fs.readFile(storiesFile, (err, data) => {
         if (err) {
-            console.error("Error reading travel stories:", err);
-            return res.status(500).json({ error: "Failed to load travel stories" });
+            return res.status(500).json({ error: 'Error reading stories' });
         }
         res.json(JSON.parse(data));
     });
 });
 
-// POST a new travel story
-router.post("/api/posts", (req, res) => {
-    const newStory = req.body;
-
-    if (!newStory.title || !newStory.content) {
-        return res.status(400).json({ error: "Title and content are required" });
-    }
-
-    fs.readFile(filePath, "utf8", (err, data) => {
+// Save Travel Story
+router.post('/api/travel-stories', (req, res) => {
+    fs.readFile(storiesFile, (err, data) => {
         if (err) {
-            console.error("Error reading travel stories:", err);
-            return res.status(500).json({ error: "Failed to read travel stories" });
+            return res.status(500).json({ error: 'Error reading stories' });
         }
 
-        let stories = JSON.parse(data);
-        newStory.id = stories.length ? stories[stories.length - 1].id + 1 : 1;
+        const stories = JSON.parse(data);
+        const newStory = {
+            title: req.body.title,
+            content: req.body.content
+        };
+
         stories.push(newStory);
 
-        fs.writeFile(filePath, JSON.stringify(stories, null, 2), (writeErr) => {
-            if (writeErr) {
-                console.error("Error writing travel stories:", writeErr);
-                return res.status(500).json({ error: "Failed to save travel story" });
+        fs.writeFile(storiesFile, JSON.stringify(stories, null, 2), (err) => {
+            if (err) {
+                return res.status(500).json({ error: 'Error saving story' });
             }
-            res.status(201).json({ message: "Travel story added successfully", newStory });
+            res.status(201).json(newStory);
         });
     });
 });
-
 module.exports = router;

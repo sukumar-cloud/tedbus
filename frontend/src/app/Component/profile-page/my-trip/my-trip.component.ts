@@ -16,13 +16,15 @@ export class MyTripComponent implements OnInit {
       images: "https://s3-ap-southeast-1.amazonaws.com/rb-plus/BI/APP/IND/WM/2323/1087/GW/DL/6fNUIf.jpeg"
     },
     // Other image objects...
-    {
-      _id: { $oid: "604b8aedb3f0410d74d91bf8" },
-      images: "https://s3-ap-southeast-1.amazonaws.com/rb-plus/BI/APP/IND/WM/2323/1087/GW/DL/6fNUIf.jpeg"
-    },
   ];
 
   randomimage: string = '';
+
+  // New Story Data
+  newStory = {
+    title: '',
+    content: ''
+  };
 
   constructor(private travelStoriesService: TravelStoriesService) {}
 
@@ -43,6 +45,26 @@ export class MyTripComponent implements OnInit {
       },
       (error) => {
         console.error('Error fetching stories:', error);
+      }
+    );
+  }
+
+  // Submit a new travel story
+  submitStory() {
+    if (!this.newStory.title || !this.newStory.content) {
+      alert('Please enter both title and content.');
+      return;
+    }
+
+    this.travelStoriesService.addStory(this.newStory).subscribe(
+      (response) => {
+        alert('Story submitted successfully!');
+        this.loadTravelStories(); // Refresh stories
+        this.newStory = { title: '', content: '' }; // Reset form
+      },
+      (error) => {
+        console.error('Error submitting story:', error);
+        alert('Failed to submit story.');
       }
     );
   }

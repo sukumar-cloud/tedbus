@@ -35,13 +35,11 @@ app.get('/', (req, res) => {
 const travelStoriesRoute = require("./routes/travelStories");
 app.use(travelStoriesRoute);
 
-// Server setup
 const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-// Send Push Notification
 app.post("/send-notification", async (req, res) => {
     const { title, body, token } = req.body;
 
@@ -62,7 +60,6 @@ app.post("/send-notification", async (req, res) => {
     }
 });
 
-// Send SMS Notification
 app.post("/send-sms", async (req, res) => {
     const { phone, message } = req.body;
 

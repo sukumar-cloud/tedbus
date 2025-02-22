@@ -60,7 +60,7 @@ import { SelectbusPageComponent } from './Component/selectbus-page/selectbus-pag
         BusBookingFormComponent,
         PaymentPageComponent,
         ProfilePageComponent,
-        MyTripComponent
+        MyTripComponent,
     ],
     bootstrap: [AppComponent],
     imports: [BrowserModule,
