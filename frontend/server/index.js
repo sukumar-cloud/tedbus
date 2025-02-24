@@ -9,9 +9,8 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(cors({
-    origin: 'https://incomparable-bunny-9f4268.netlify.app'
-}));
+app.use(cors({ origin: "*" }));
+
 app.use(bodyparser.json());
 
 // Environment variable for API URL
