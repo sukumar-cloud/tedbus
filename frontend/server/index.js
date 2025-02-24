@@ -18,7 +18,6 @@ const apiUrl = process.env.API_URL || "/api";
 const customerroutes = require("./routes/customer");
 const routesroute = require("./routes/route");
 const bookingroute = require("./routes/booking");
-const travelStoriesRoutes = require("./routes/travelStories");
 const travelStoriesRoutes = require('./routes/travelStories');
 
 // Use routes
@@ -80,5 +79,4 @@ app.post("/send-sms", async (req, res) => {
         res.status(500).json({ error: "Failed to send SMS" });
     }
 });
-const travelStoriesRoutes = require('./routes/travelStories');
 app.use('/api', travelStoriesRoutes);
