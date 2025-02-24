@@ -1,83 +1,90 @@
-<div class="travel-stories">
-  <h2>Travel Stories</h2>
+<div class="travel-stories" style="padding: 20px;">
+  <h2 style="margin-bottom: 20px;">Travel Stories</h2>
 
   <!-- Submit Travel Story Form -->
-  <div class="story-form">
-    <h3>Share Your Travel Experience</h3>
-    
-    <input type="text" [(ngModel)]="newStory.title" placeholder="Enter story title" />
-    
-    <textarea [(ngModel)]="newStory.content" placeholder="Write your story..."></textarea>
-    
-    <button (click)="submitStory()">Submit Story</button>
+  <div class="story-form" style="margin-bottom: 40px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+    <h3 style="margin-bottom: 10px;">Share Your Travel Experience</h3>
+
+    <input type="text" [(ngModel)]="newStory.title" placeholder="Enter story title"
+      style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;" />
+
+    <textarea [(ngModel)]="newStory.content" placeholder="Write your story..."
+      style="width: 100%; height: 150px; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+    </textarea>
+
+    <button (click)="submitStory()"
+      style="padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+      Submit Story
+    </button>
   </div>
 
   <!-- Display Travel Stories -->
-  <div *ngIf="travelStories.length === 0">
+  <div *ngIf="travelStories.length === 0" style="text-align: center;">
     <p>No travel stories yet.</p>
   </div>
 
-  <div *ngFor="let story of travelStories" class="story-card">
-    <h3>{{ story.title }}</h3>
+  <div *ngFor="let story of travelStories" class="story-card"
+    style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+    <h3 style="margin-bottom: 5px;">{{ story.title }}</h3>
     <p>{{ story.content }}</p>
   </div>
 </div>
 
 
 <div class="SingleTrip" *ngFor="let booking of booking">
-    <div class="SingleTrip__image">
-      <img [src]="randomimage" alt="bus" />
+  <div class="SingleTrip__image">
+    <img [src]="randomimage" alt="bus" />
+  </div>
+  <div style="display: flex; justify-content: space-evenly">
+    <div class="SingleTrip__busdetails">
+      <div class="heading" style="font-weight: 600; font-size: large;">Bus Details</div>
+      <!-- Insertion for Departure, Arrival details, and fare -->
+      <p>
+        <span class="material-icons">radio_button_checked</span> Departure Location: {{ booking.departureDetails.city }}
+      </p>
+      <p>
+        <span class="material-icons">radio_button_checked</span> Departure Time: {{ booking.departureDetails.time }}:00
+        hrs
+      </p>
+      <p>
+        <span class="material-icons">radio_button_checked</span> Departure Date: {{ booking.departureDetails.date }}
+      </p>
+      <p>
+        <span class="material-icons">radio_button_checked</span> Arrival Location: {{ booking.arrivalDetails.city }}
+      </p>
+      <p>
+        <span class="material-icons">radio_button_checked</span> Arrival Time: {{ booking.arrivalDetails.time }}:00 hrs
+      </p>
+      <p>
+        <span class="material-icons">radio_button_checked</span> Arrival Date: {{ booking.arrivalDetails.date }}
+      </p>
+      <p>
+        <span class="material-icons">radio_button_checked</span> Total Fare: {{ booking.fare }}
+      </p>
     </div>
-    <div style="display: flex; justify-content: space-evenly">
-      <div class="SingleTrip__busdetails">
-        <div class="heading" style="font-weight: 600; font-size: large;">Bus Details</div>
-        <!-- Insertion for Departure, Arrival details, and fare -->
-        <p>
-          <span class="material-icons" >radio_button_checked</span> Departure Location: {{ booking.departureDetails.city }}
-        </p>
-        <p>
-          <span class="material-icons" >radio_button_checked</span> Departure Time: {{ booking.departureDetails.time }}:00 hrs
-        </p>
-        <p>
-          <span class="material-icons" >radio_button_checked</span> Departure Date: {{ booking.departureDetails.date }}
-        </p>
-        <p>
-          <span class="material-icons" >radio_button_checked</span> Arrival Location: {{ booking.arrivalDetails.city }}
-        </p>
-        <p>
-          <span class="material-icons" >radio_button_checked</span> Arrival Time: {{ booking.arrivalDetails.time }}:00 hrs
-        </p>
-        <p>
-          <span class="material-icons" >radio_button_checked</span> Arrival Date: {{ booking.arrivalDetails.date }}
-        </p>
-        <p>
-          <span class="material-icons" >radio_button_checked</span> Total Fare: {{ booking.fare }}
-        </p>
-      </div>
-      <div class="SingleTrip__persondetails">
-        <div class="heading" style="font-weight: 600; font-size: large;">Passenger Details</div>
+    <div class="SingleTrip__persondetails">
+      <div class="heading" style="font-weight: 600; font-size: large;">Passenger Details</div>
 
-        <!-- Insertion for Passenger details -->
-        <p>
-          <span class="material-icons" >arrow_right_alt</span> Contact Email: {{ booking.email }}
+      <!-- Insertion for Passenger details -->
+      <p>
+        <span class="material-icons">arrow_right_alt</span> Contact Email: {{ booking.email }}
+      </p>
+      <p>
+        <span class="material-icons">arrow_right_alt</span> Contact Phone Number: {{ booking.phoneNumber }}
+      </p>
+      <div class="SingleTrip__customerDetails__passenger">
+        <div *ngFor="let passenger of booking.passengerDetails">
+          <p>
+            <span class="material-icons">arrow_right_alt</span> Name: {{ passenger.name }}
           </p>
           <p>
-            <span class="material-icons" >arrow_right_alt</span> Contact Phone Number: {{ booking.phoneNumber }}
+            <span class="material-icons">arrow_right_alt</span> Gender: {{ passenger.gender }}
           </p>
-          <div class="SingleTrip__customerDetails__passenger">
-            <div *ngFor="let passenger of booking.passengerDetails">
-              <p>
-                <span class="material-icons" >arrow_right_alt</span> Name: {{ passenger.name }}
-              </p>
-              <p>
-                <span class="material-icons" >arrow_right_alt</span> Gender: {{ passenger.gender }}
-              </p>
-              <p>
-                <span class="material-icons" >arrow_right_alt</span> Age: {{ passenger.age }}
-              </p>
-            </div>
-          </div>
+          <p>
+            <span class="material-icons">arrow_right_alt</span> Age: {{ passenger.age }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  
+</div>
