@@ -33,6 +33,9 @@
     "firebase": "^11.3.1",
     "firebase-admin": "^13.1.0",
     "googleapis": "^144.0.0",
+    "leaflet": "^1.9.4",
+    "leaflet-routing-machine": "^3.2.12",
+    "openrouteservice-js": "^0.4.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
