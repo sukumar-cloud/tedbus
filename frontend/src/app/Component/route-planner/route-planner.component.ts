@@ -1,7 +1,8 @@
 import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
-import OpenRouteService from 'openrouteservice-js';
+import { environment } from '../../../environments/environment';
+const OpenRouteService = require('openrouteservice-js'); 
 
 @Component({
   selector: 'app-route-planner',
@@ -50,14 +51,19 @@ export class RoutePlannerComponent implements AfterViewInit {
   }
 
   getAlternativeRoutes(start: number[], end: number[]) {
-    const ors = new OpenRouteService({ api_key: 'YOUR_API_KEY' });
+    const ors = new OpenRouteService({
+      api_key: environment.openRouteApiKey // Use API key from environment
+    });
+
     ors.directions({
       coordinates: [[start[1], start[0]], [end[1], end[0]]],
       profile: 'driving-car',
       format: 'geojson',
       alternative_routes: { target_count: 2 }
-    }).then(data => {
+    }).then((data: any) => {
       L.geoJSON(data).addTo(this.map);
+    }).catch((error: any) => {
+      console.error('Error fetching alternative routes:', error);
     });
   }
 }

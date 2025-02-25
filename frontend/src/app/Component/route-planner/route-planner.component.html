@@ -1,1 +1,13 @@
-<p>route-planner works!</p>
+<div class="route-planner-container">
+    <div class="input-container">
+      <label for="start">Start:</label>
+      <input id="start" type="text" [(ngModel)]="startLocation" placeholder="Enter start location">
+      
+      <label for="end">End:</label>
+      <input id="end" type="text" [(ngModel)]="endLocation" placeholder="Enter end location">
+      
+      <button (click)="calculateRoute()">Plan Route</button>
+    </div>
+    <div id="map"></div>
+  </div>
+  
