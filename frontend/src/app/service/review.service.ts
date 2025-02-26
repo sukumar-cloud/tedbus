@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReviewService {
-  private apiUrl = 'http://localhost:5000/api/reviews'; // Change based on your backend
+  private apiUrl = 'https://tedbus-k8vq.onrender.com/api/reviews'; // Change based on your backend
 
   constructor(private http: HttpClient) {}
 
