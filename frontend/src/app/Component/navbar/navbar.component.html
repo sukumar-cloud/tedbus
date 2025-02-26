@@ -71,7 +71,7 @@
 
         <a class="flex items-center justify-center gap-2 h-10 px-2 rounded-lg hover:bg-gray-100">
             <i class="fa-solid fa-headset text-[#4a4a4a] text-xl"></i>
-            <p (click)="openChatbot()" class="help-btn">Help</p>
+            <p (click)="openChatbot()" class="help-btn" style="text-decoration: none;">Help</p>
         </a>
 
         <button #elseBlock class="flex items-center justify-center gap-2 h-10 px-2 rounded-lg hover:bg-gray-100"
@@ -82,7 +82,6 @@
         </button>
         <mat-menu #menu="matMenu">
             <button mat-menu-item>My Trips</button>
-            <button mat-menu-item>Wallet/Cards</button>
             <button mat-menu-item (click)="navigate('/profile')">My Profile</button>
             <button mat-menu-item>Wallet</button>
             <button mat-menu-item (click)="handlelogout()">Sign Out</button>
