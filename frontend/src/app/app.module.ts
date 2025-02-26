@@ -27,7 +27,6 @@ import { NavbarComponent } from './Component/navbar/navbar.component';
 import { PaymentPageComponent } from './Component/payment-page/payment-page.component';
 import { MyTripComponent } from './Component/profile-page/my-trip/my-trip.component';
 import { ProfilePageComponent } from './Component/profile-page/profile-page.component';
-import { RoutePlannerComponent } from './Component/route-planner/route-planner.component';
 import { HeaderComponent } from './Component/selectbus-page/header/header.component';
 import { LeftComponent } from './Component/selectbus-page/left/left.component';
 import { BottomTabComponent } from './Component/selectbus-page/right/bus-book/bottom-tab/bottom-tab.component';
@@ -62,7 +61,6 @@ import { SelectbusPageComponent } from './Component/selectbus-page/selectbus-pag
         PaymentPageComponent,
         ProfilePageComponent,
         MyTripComponent,
-        RoutePlannerComponent,
     ],
     bootstrap: [AppComponent],
     imports: [BrowserModule,

@@ -13,7 +13,20 @@
 
 <div class="displayArea" *ngIf="tabstate[0]">Amenities</div>
 <div class="displayArea" *ngIf="tabstate[1]"> Boarding and Droping Points</div>
-<div class="displayArea" *ngIf="tabstate[2]">Reviews</div>
+<div class="displayArea" *ngIf="tabstate[2]" (click)="showReviews()">Reviews</div>
+
+<div *ngIf="reviews.length > 0">
+  <h3>User Reviews</h3>
+  <ul>
+    <li *ngFor="let review of reviews">
+      <strong>{{ review.username }}</strong>: {{ review.comment }} (Rating: {{ review.rating }}/5)
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="reviews.length === 0">
+  <p>No reviews available.</p>
+</div>
 <div class="displayArea" *ngIf="tabstate[3]">Booking Policies</div>
 <div class="displayArea" *ngIf="tabstate[4]">
     <app-view-seats [filledseats]="filledseats" [seatprice]="seatprice" [routedetails]="routedetials" [busid]="busid"

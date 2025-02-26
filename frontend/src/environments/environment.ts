@@ -1,7 +1,7 @@
 export const environment = {
     production: false,
     apiUrl: 'https://tedbus-k8vq.onrender.com/api',
-    openRouteApiKey: 'YOUR_API_KEY_HERE',
+    openRouteApiKey: '5b3ce3597851110001cf6248d673b5eea87044548fce57836efc0ed0',
     firebase: {
         apiKey: "AIzaSyAdRGAC0pEvIhASdnzFa4j_vIDL-2gueZo",
         authDomain: "tedbus-ee0fe.firebaseapp.com",
